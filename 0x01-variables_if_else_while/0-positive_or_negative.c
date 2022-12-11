@@ -1,9 +1,9 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
- * main - entry point
- * Description - prints if a number is positive or negative
+ * main - Entry
+ * Description: Print value of n status; zero, positive or negative
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -12,10 +12,12 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
+	/*task code*/
 	if (n > 0)
-		printf("%d is positive\n", n);
+		printf("%i is positive\n", n);
 	else if (n == 0)
-		pritnf("%i is zero\n", n);
+		printf("%i is zero\n", n);
 	else
 		printf("%i is negative\n", n);
 	return (0);
