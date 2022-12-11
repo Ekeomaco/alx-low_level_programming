@@ -1,13 +1,13 @@
-#!/bin/bash
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
  * main - Entry
  * print the value of n status; zero, positive or negative
  * Return: 0
  */
+
 int main(void)
 {
 	int n;
