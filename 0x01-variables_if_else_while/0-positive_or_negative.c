@@ -3,8 +3,8 @@
 #include <stdio.h>
 /**
  * main - Entry
- * Description: Print value of n status; zero, positive or negative
- * Return: Always 0 (Success)
+ * print the value of n status; zero, positive or negative
+ * Return: 0
  */
 int main(void)
 {
@@ -12,8 +12,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
-	/*task code*/
 	if (n > 0)
 		printf("%i is positive\n", n);
 	else if (n == 0)
@@ -21,4 +19,6 @@ int main(void)
 	else
 		printf("%i is negative\n", n);
 	return (0);
+
 }
+
