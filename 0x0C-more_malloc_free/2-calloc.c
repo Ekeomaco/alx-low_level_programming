@@ -1,51 +1,34 @@
+#include "holberton.h"
 #include <stdlib.h>
 
 /**
- * _memset - fills memory with a constant byte
+ * _calloc - Allocates memory for an array of a certain number
+ *           of elements each of an inputted byte size.
+ * @nmemb: The number of elements.
+ * @size: The byte size of each array element.
  *
- * @s: input pointer that represents memory
- *     block to fill
- * @b: characters to fill
- * @n: number of bytes to be filled
- *
- * Return: A pointer to the filled memory area
-*/
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-		s[i] = b;
-	return (s);
-}
-
-/**
- * _calloc - a function that allocates
- *           memory for an array using malloc
- *
- *           It is basically the equivalent to
- *           malloc followed by memset
- *
- * @nmemb: size of array
- * @size: size of each element
- *
- * Return: pointer with new allocated memory
- *         or NULL if it fails
-*/
-
+ * Return: If nmemb = 0, size = 0, or the function fails - NULL.
+ *         Otherwise - a pointer to the allocated memory.
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	void *mem;
+	char *filler;
+	unsigned int index;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	p = malloc(nmemb * size);
-	if (p == NULL)
-		return (NULL);
+	mem = malloc(size * nmemb);
 
-	_memset(p, 0, nmemb * size);
+	if (mem == NULL)
+		return (NULL
+);
 
-	return (p)
+	filler = mem;
+
+	for (index = 0; index < (size * nmemb); index++)
+		filler[index] = '\0';
+
+	return (mem);
 }
